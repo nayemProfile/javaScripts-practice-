@@ -1,71 +1,55 @@
-// Operator Precedence in JavaScript
-// 1. Parentheses
-let result1 = (2 + 3) * 4; // 20
-console.log(result1);
+// JavaScript Functions 
+function myFunction1(){
+    console.log("Hello World");
+}
+myFunction1();
+
+// Function with parameters
 /*
-(2 + 3) * 4
-= 5 * 4
-= 20
+let fullName = prompt("Enter Your Full Name");
+let age = prompt("Enter Your Age");
+function myFunction(fullName, age) {
+    console.log("Hello, My Name is " + fullName + " I am "+ age + " years old."); 
+}
+myFunction(fullName, age);
 */
 
-let result2 = 3 + 5 + 4 - 3 * 8 / 3; // 4
-console.log(result2);
-/*
-3 + 5 + 4 - 3 * 8 / 3
-= 3 + 5 + 4 - (3 * 8 / 3)
-= 3 + 5 + 4 - (24 / 3)
-= 3 + 5 + 4 - 8
-= 3 + 5 + (4 - 8)
-= 3 + 5 - 4
-= 3 + 1
-= 4
-*/
+// Function action with button
+function clickHareBtn() {
+    console.log("I Im a cleckable function");
+}
+ document.getElementById('clickable').addEventListener('click', clickHareBtn);
 
-let result3 = 2 + 3 * 4 - 5 / 2; // 11.5
-console.log(result3);
-/*
-2 + 3 * 4 - 5 / 2
-= 2 + (3 * 4) - (5 / 2)
-= 2 + 12 - (5 / 2)
-= 2 + 12 - 2.5
-= 2 + 9.5
-= 11.5
-*/ 
+// Function with return value
+function addNumbers(a, b) {
+    return a + b;
+}
+let result = addNumbers(5, 10);
+let result2 = addNumbers(20, 30);
+let result3 = addNumbers(100, 200);
+console.log("The result of the addition is: " + result, result2, result3);
 
-let result4 = 2 + (3 * 4) - (5 / 2); // 10.5
-/*
-2 + (3 * 4) - (5 / 2)
-= 2 + 12 - (5 / 2)
-= 2 + 12 - 2.5
-= 2 + 9.5
-= 10.5
-*/
-console.log(result4);
 
-// 2. Exponentiation
-let result5 = 2 ** 3 + 4; // 12
-/*
-2 ** 3 + 4
-= 8 + 4
-= 12
-*/
-console.log(result5);
+// self-invoking function
+(function(message) {
+    console.log("This is a self-invoking function", message);
+})("hello I am Nayem ");
 
-// 3. Multiplication, Division, and Modulus
-let result6 = 2 * 3 + 4 / 2; // 8
-/*
-2 * 3 + 4 / 2  
-= 6 + (4 / 2)
-= 6 + 2
-= 8
-*/ 
-console.log(result6);
+// Function with default parameters
+function greet(name = "Guest", age = 18) {
+    console.log(`Hello, ${name}! You are ${age} years old.`);
+}  
+greet(); // No arguments, uses default values
+greet("Alice", 25); // Custom values
 
-// 4. Addition and Subtraction
-let result7 = 2 + 3 - 4; // 1
-/*
-2 + 3 - 4
-= 5 - 4
-= 1
-*/
-console.log(result7);
+// anonymous function
+let myAnonymousFunction = function() {
+    console.log("This is an anonymous function");
+};
+myAnonymousFunction(); // Call the anonymous function
+
+// Arrow function
+let myArrowFunction = () => {
+    console.log("This is an arrow function");
+};
+myArrowFunction(); // Call the arrow function
