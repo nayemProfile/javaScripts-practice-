@@ -1,55 +1,69 @@
-// JavaScript Functions 
-function myFunction1(){
-    console.log("Hello World");
-}
-myFunction1();
+// Object in JavaScript
 
-// Function with parameters
+// Creating an object
+const person = {
+    // key: value pairs
+    firstName: "Md",
+    lastName: "Nayem",
+    age: 25,
+    fullName: function() {
+        return this.firstName + " " + this.lastName;
+    }
+};
+console.log(person);
+console.log(person.firstName);
+console.log(person.lastName);
+
+const newSymbol = Symbol("Key1");
+const mobilePhone = {
+    brand: "Apple",
+    model: "iPhone 14 Pro",
+    price: 999,
+    features: ["5G", "Face ID", "Triple Camera"],
+    'selfeie camera': "12 MP",
+    [newSymbol]: "This is a symbol key",
+
+};
+console.log(mobilePhone);
+console.log(mobilePhone.brand);
+console.log(mobilePhone.model);
+console.log(mobilePhone.features);
+console.log(mobilePhone['selfeie camera']);
+console.log([newSymbol]);
+
+// Accessing object properties
+console.log(mobilePhone[newSymbol]); // Accessing symbol key
+// Adding a new property
+mobilePhone.color = "Space Black";
+console.log(mobilePhone); // Accessing  Object property
+console.log(mobilePhone.color); // Accessing new property
 /*
-let fullName = prompt("Enter Your Full Name");
-let age = prompt("Enter Your Age");
-function myFunction(fullName, age) {
-    console.log("Hello, My Name is " + fullName + " I am "+ age + " years old."); 
-}
-myFunction(fullName, age);
-*/
+// Deleting a property \
+delete mobilePhone.price;
+delete mobilePhone.color;
+console.log(mobilePhone.price); // Should be undefined after deletion
+console.log(mobilePhone.color); // Should be undefined after deletion
+ */
 
-// Function action with button
-function clickHareBtn() {
-    console.log("I Im a cleckable function");
-}
- document.getElementById('clickable').addEventListener('click', clickHareBtn);
-
-// Function with return value
-function addNumbers(a, b) {
-    return a + b;
-}
-let result = addNumbers(5, 10);
-let result2 = addNumbers(20, 30);
-let result3 = addNumbers(100, 200);
-console.log("The result of the addition is: " + result, result2, result3);
+// Checking if a property exists
+let propertiesCheck = mobilePhone.hasOwnProperty("color"); // Check if the property exists
+console.log(propertiesCheck); // true if exists, false if not
 
 
-// self-invoking function
-(function(message) {
-    console.log("This is a self-invoking function", message);
-})("hello I am Nayem ");
-
-// Function with default parameters
-function greet(name = "Guest", age = 18) {
-    console.log(`Hello, ${name}! You are ${age} years old.`);
-}  
-greet(); // No arguments, uses default values
-greet("Alice", 25); // Custom values
-
-// anonymous function
-let myAnonymousFunction = function() {
-    console.log("This is an anonymous function");
+// contration of object
+const person1 = {
+    firstName: "Md",
+    lastName: "Nayem",
+    age: 25,
+    fullName() {
+        return `${this.firstName} ${this.lastName}`;
+    }
 };
-myAnonymousFunction(); // Call the anonymous function
+console.log(person1);
+// Using Object constructor
+const person2 = new Object();
+console.log(person2);
 
-// Arrow function
-let myArrowFunction = () => {
-    console.log("This is an arrow function");
-};
-myArrowFunction(); // Call the arrow function
+// Using Object.create() to create an object with a prototype
+const person3 = Object.create(person1);
+person3.firstName = "Alice";
