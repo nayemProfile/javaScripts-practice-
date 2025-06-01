@@ -1,69 +1,56 @@
-// Object in JavaScript
+// Varialbes in JavaScript
 
-// Creating an object
-const person = {
-    // key: value pairs
-    firstName: "Md",
-    lastName: "Nayem",
-    age: 25,
-    fullName: function() {
-        return this.firstName + " " + this.lastName;
-    }
+// var - Old way of declaring variables
+var oldName = "md nayem"; 
+var oldAge = 25; 
+console.log(`old Name: ${oldName}`);
+console.log(`old Age: ${oldAge}`);
+
+// let -Modern way of declaring variables
+let newName = "nayem";
+let newAge = 28;
+console.log(`New Name: ${newName}`);
+console.log(`New Age: ${newAge}`);
+
+// const
+const pi = 3.14; // Constant value
+console.log(`Value of Pi: ${pi}`);
+
+// Data Types in JavaScript
+let number = 42; // Number
+let string = "Hello, World!"; // String
+let boolean = false; // Boolean
+let undefinedVariable; // Undefined
+let nullVariable = null; // Null
+let bigIntVariable = BigInt(123456789012345678901234567890); // BigInt
+
+console.log(`Number: ${number}`);
+console.log(`String: ${string}`);
+console.log(`Boolean: ${boolean}`);
+console.log(`Undefined Variable: ${undefinedVariable}`);
+console.log(`Null Variable: ${nullVariable}`);
+console.log(`BigInt Variable: ${bigIntVariable}`);
+
+// Type Conversion in JavaScript
+let numString = "123"; // String
+let num = Number(numString); // Convert string to number
+let strNum = num.toString(); // Convert number to string
+console.log(`Converted String to Number: ${num}`);
+console.log(`Converted Number to String: ${strNum}`);
+
+
+// Example of using variables in JavaScript
+let name = "Md Nayem"; // String
+let age = 25; // Number
+let isStudent = true; // Boolean
+let hobbies = ["reading", "gaming", "coding"]; // Array
+let address = { // Object
+    street: "123 Main St",
+    city: "Dhaka",
+    country: "Bangladesh"
 };
-console.log(person);
-console.log(person.firstName);
-console.log(person.lastName);
-
-const newSymbol = Symbol("Key1");
-const mobilePhone = {
-    brand: "Apple",
-    model: "iPhone 14 Pro",
-    price: 999,
-    features: ["5G", "Face ID", "Triple Camera"],
-    'selfeie camera': "12 MP",
-    [newSymbol]: "This is a symbol key",
-
-};
-console.log(mobilePhone);
-console.log(mobilePhone.brand);
-console.log(mobilePhone.model);
-console.log(mobilePhone.features);
-console.log(mobilePhone['selfeie camera']);
-console.log([newSymbol]);
-
-// Accessing object properties
-console.log(mobilePhone[newSymbol]); // Accessing symbol key
-// Adding a new property
-mobilePhone.color = "Space Black";
-console.log(mobilePhone); // Accessing  Object property
-console.log(mobilePhone.color); // Accessing new property
-/*
-// Deleting a property \
-delete mobilePhone.price;
-delete mobilePhone.color;
-console.log(mobilePhone.price); // Should be undefined after deletion
-console.log(mobilePhone.color); // Should be undefined after deletion
- */
-
-// Checking if a property exists
-let propertiesCheck = mobilePhone.hasOwnProperty("color"); // Check if the property exists
-console.log(propertiesCheck); // true if exists, false if not
-
-
-// contration of object
-const person1 = {
-    firstName: "Md",
-    lastName: "Nayem",
-    age: 25,
-    fullName() {
-        return `${this.firstName} ${this.lastName}`;
-    }
-};
-console.log(person1);
-// Using Object constructor
-const person2 = new Object();
-console.log(person2);
-
-// Using Object.create() to create an object with a prototype
-const person3 = Object.create(person1);
-person3.firstName = "Alice";
+console.log(`My Name is ${name}`);
+console.log(`I am ${age} years old`);
+console.log(`Am I a student? ${isStudent}`);
+console.log(`My hobbies are: ${hobbies.join(", ")}`);
+console.log(`I live at ${address.street}, ${address.city}, ${address.country}`);
