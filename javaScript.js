@@ -1,56 +1,61 @@
-// Varialbes in JavaScript
+// Arrays in JavaScript
 
-// var - Old way of declaring variables
-var oldName = "md nayem"; 
-var oldAge = 25; 
-console.log(`old Name: ${oldName}`);
-console.log(`old Age: ${oldAge}`);
+// Creating an array
+let fruits = ["Apple", "Banana", "Cherry"];
+console.log(fruits); // Output: [ 'Apple', 'Banana', 'Cherry' ]
+// Accessing elements in an array
+console.log(fruits[0]); // Output: Apple
+console.log(fruits[1]); // Output: Banana  
+console.log(fruits[2]); // Output: Cherry
+// Modifying elements in an array
+fruits[0] = "Mango";
+console.log(fruits[0]); // Output: Mango
+fruits[1] = "Orange";
+console.log(fruits[1]); // Output: Orange
+console.log(fruits); // Output: [ 'Mango', 'Orange', 'Cherry' ]
 
-// let -Modern way of declaring variables
-let newName = "nayem";
-let newAge = 28;
-console.log(`New Name: ${newName}`);
-console.log(`New Age: ${newAge}`);
+const ProgrammingLanguages = ["JavaScript", "Python", "Java", "C++", "Ruby"];
+console.log(ProgrammingLanguages); // Output: [ 'JavaScript', 'Python', 'Java', 'C++', 'Ruby' ]
+// Accessing elements in an array
+console.log(ProgrammingLanguages[0]); // Output: JavaScript
+console.log(ProgrammingLanguages[1]); // Output: Python
+console.log(ProgrammingLanguages[2]); // Output: Java
+console.log(ProgrammingLanguages[3]); // Output: C++
+console.log(ProgrammingLanguages[4]); // Output: Ruby
+// Modifying elements in an array
+ProgrammingLanguages[0] = "TypeScript";
+console.log(ProgrammingLanguages[0]); // Output: TypeScript
+ProgrammingLanguages[1] = "Go";
+console.log(ProgrammingLanguages[1]); // Output: Go
+console.log(ProgrammingLanguages); // Output: [ 'TypeScript', 'Go', 'Java', 'C++', 'Ruby' ]
 
-// const
-const pi = 3.14; // Constant value
-console.log(`Value of Pi: ${pi}`);
+// Creating an array of numbers
+const numbers = [1, 2, 3, 4, 5];
+// Accessing elements in an array
+console.log(numbers[0]); // Output: 1
+console.log(numbers[1]); // Output: 2
+console.log(numbers[2]); // Output: 3
+// Modifying elements in an array
+numbers[0] = 10;
+console.log(numbers[0]); // Output: 10
 
-// Data Types in JavaScript
-let number = 42; // Number
-let string = "Hello, World!"; // String
-let boolean = false; // Boolean
-let undefinedVariable; // Undefined
-let nullVariable = null; // Null
-let bigIntVariable = BigInt(123456789012345678901234567890); // BigInt
+console.log(typeof fruits); // Output: object
+console.log(typeof ProgrammingLanguages); // Output: object
+console.log(typeof numbers); // Output: object
 
-console.log(`Number: ${number}`);
-console.log(`String: ${string}`);
-console.log(`Boolean: ${boolean}`);
-console.log(`Undefined Variable: ${undefinedVariable}`);
-console.log(`Null Variable: ${nullVariable}`);
-console.log(`BigInt Variable: ${bigIntVariable}`);
+// Checking the length of an array
+console.log(fruits.length); // Output: 3
+console.log(ProgrammingLanguages.length); // Output: 5
+console.log(numbers.length); // Output: 5
 
-// Type Conversion in JavaScript
-let numString = "123"; // String
-let num = Number(numString); // Convert string to number
-let strNum = num.toString(); // Convert number to string
-console.log(`Converted String to Number: ${num}`);
-console.log(`Converted Number to String: ${strNum}`);
+// Indexing in arrays
+console.log(fruits[fruits.length - 1]); // Output: Cherry
+console.log(ProgrammingLanguages[ProgrammingLanguages.length - 1]); // Output: Ruby
+console.log(numbers[numbers.length - 1]); // Output: 5
 
-
-// Example of using variables in JavaScript
-let name = "Md Nayem"; // String
-let age = 25; // Number
-let isStudent = true; // Boolean
-let hobbies = ["reading", "gaming", "coding"]; // Array
-let address = { // Object
-    street: "123 Main St",
-    city: "Dhaka",
-    country: "Bangladesh"
-};
-console.log(`My Name is ${name}`);
-console.log(`I am ${age} years old`);
-console.log(`Am I a student? ${isStudent}`);
-console.log(`My hobbies are: ${hobbies.join(", ")}`);
-console.log(`I live at ${address.street}, ${address.city}, ${address.country}`);
+// Adding elements to an array
+fruits.push("Grapes");
+console.log(fruits); // Output: [ 'Mango', 'Orange', 'Cherry', 'Grapes' ]
+// Removing elements from an array
+fruits.pop();
+console.log(fruits); // Output: [ 'Mango', 'Orange', 'Cherry' ]
