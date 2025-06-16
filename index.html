@@ -3,11 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=, initial-scale=1.0">
-    <title>javaScript Comments</title>
+    <title>javaScript Event</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+    <h2 id="text"></h2>
+    <button onclick="subscribe()" id="btn">Subscribe</button><br>
+
+    <button id="button">Subscribe</button><br>
+    <button onclick="like()" id="btn1"><i class="fa-regular fa-thumbs-up"></i>  Like</button>
+    <h2 id="text1"></h2>
+
+
+    <h2 id="text2"></h2>
+    <form action="" id="form" onkeypress="keyPress()">
+        <label class="CmnInput" for="input" >Enter your name:</label>
+        <input class="CmnInput" type="text" id="input" placeholder="Enter your name"><br>
+        <label class="CmnInput" for="input1">Enter your email:</label>
+        <input class="CmnInput" type="email" id="input1" placeholder="Enter your email"><br>
+        <label class="CmnInput" for="input2">Enter your Message:</label>
+        <textarea id="input2" placeholder="Enter your message"></textarea><br>
+        <button type="submit" id="btn2">Sent Your Message</button>
+    </form>
+
+
+ 
+    
     <script src="javaScript.js"></script>
+
 
 </body>
 </html>
