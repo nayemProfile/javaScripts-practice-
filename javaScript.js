@@ -1,167 +1,48 @@
-// Event in JavaScript
-// onclick event
-function subscribe(){
-    document.getElementById('btn').innerHTML = 'Subscribed!';
-    document.getElementById('text').innerHTML = 'Thanks for Subscribed!';
-    document.getElementById('btn').style.backgroundColor = 'red';
-};
+// Math object in JavaScript
 
-// onclick event
-function like(){
-    document.getElementById('btn1').innerHTML = '<i class="fa-solid fa-thumbs-up"></i>  Liked!';
-    document.getElementById('text1').innerHTML = 'Thanks for Liked!';
+// Example of using Math object methods
+console.log("Math.PI:", Math.PI); // Output: 3.141592653589793
+console.log("Math.E:", Math.E); // Output: 2.718281828459045
+console.log("Math.sqrt(16):", Math.sqrt(16)); // Output: 4
+console.log("Math.pow(2, 3):", Math.pow(2, 3)); // Output: 8
+console.log("Math.max(10, 20, 30):", Math.max(10, 20, 30)); // Output: 30
+console.log("Math.min(10, 20, 30):", Math.min(10, 20, 30)); // Output: 10
+
+// Example of using Math.random() to generate a random number
+console.log("Math.random():", Math.random()); // Output: A random number between 0 and 1
+
+// Example of using Math.floor() to round down a number
+console.log("Math.floor(4.7):", Math.floor(4.900303000599484)); // Output: 4
+console.log("Math.floor(4.3):", Math.floor(9.00000303000599484)); // Output: 9
+
+// Example of using Math.ceil() to round up a number
+console.log("Math.ceil(4.3):", Math.ceil(4.36488374938)); // Output: 5
+console.log("Math.ceil(4.7):", Math.ceil(9.00303000599484)); // Output: 10
+
+// Example of using Math.round() to round a number to the nearest integer
+console.log("Math.round(4.510000899):", Math.round(4.5)); // Output: 5
+console.log("Math.round(4.4979999):", Math.round(4.4)); // Output: 4
+
+// Example of using Math.abs() to get the absolute value of a number
+console.log("Math.abs(-5):", Math.abs(-5)); // Output: 5 alowas seen the positive value
+
+
+
+function playLudo() {
+    let randomNumber = Math.floor(Math.random() * 6) + 1;
+    let imageSource = 'img/' + randomNumber + '.png';
+
+    let img = document.getElementById('imgSrc');
+    
+    // Reset and trigger animation
+    img.classList.remove('rotate');
+    void img.offsetWidth; // reflow trick to restart animation
+    img.classList.add('rotate');
+
+    // Update image
+    img.src = imageSource;
+
+    // // Optional: play dice sound
+    // let sound = new Audio('audio/dice.mp3');
+    // sound.play();
 }
-
-
-/*
-// onmouseover event
-// onmouseout event
-// onfocus event
-// onblur event
-// onkeydown event
-// onkeyup event
-// onkeypress event
-// onload event
-// onresize event
-// onscroll event
-// onselect event
-// onchange event
-// onsubmit event
-// onreset event
-// onerror event
-// oncontextmenu event
-// ondrag event
-// ondragstart event
-// ondragend event
-// ondragover event
-// ondragenter event
-// ondragleave event
-// ondrop event
-// oncopy event
-// oncut event
-// onpaste event
-// onbeforeunload event
-// onafterprint event
-// onbeforeprint event
-// onmessage event
-// onstorage event
-// onanimationstart event
-// online event
-// onsearch event
-*/
-
-
-// document.getElementById('button').onclick = function(){
-//     document.getElementById('btn').innerHTML = 'Subscribed!😍';
-// }
-
-document.getElementById('button').addEventListener('click', function(){
-     document.getElementById('button').innerHTML = 'Subscribed!😍';
-    })
-   
-
-
-
-// //keypress event
-// function keyPress(){
-//     document.getElementById('text2').innerHTML = 'You pressed a key!';
-//     document.getElementById('text2').style.color = 'blue';
-// }
-// //onkeydown event
-// // onkeyup event
-// // onkeypress event
-// function keyDown(){
-//     document.getElementById('text3').innerHTML = 'You pressed a key down!';
-//     document.getElementById('text3').style.color = 'green';
-// }
-
-// // onkeyup event
-// function keyUp(){
-//     document.getElementById('text4').innerHTML = 'You released a key!';
-//     document.getElementById('text4').style.color = 'orange';
-// }
-
-// // onfocus event\
-// function focusInput(){
-//     document.getElementById('btn5').innerHTML = 'Input field is focused!';
-//     document.getElementById('btn5').style.color = 'purple';
-// }
-
-// // onblur event
-// function blurInput(){
-//     document.getElementById('btn6').innerHTML = 'Input field lost focus!';
-//     document.getElementById('btn6').style.color = 'brown';
-// }
-
-// // onload event
-// function loadPage(){
-//     document.getElementById('text7').innerHTML = 'Page is loaded!';
-//     document.getElementById('text7').style.color = 'pink';
-// }
-
-// // onresize event
-// function resizeWindow(){
-//     document.getElementById('btn7').innerHTML = 'Window is resized!';
-//     document.getElementById('btn7').style.color = 'cyan';
-// }
-
-// // onscroll event
-// function scrollPage(){
-//     document.getElementById('btn8').innerHTML = 'Page is scrolled!';
-//     document.getElementById('btn8').style.color = 'magenta';
-// }
-
-// // onselect event
-// function selectText(){
-//     document.getElementById('btn9').innerHTML = 'Text is selected!';
-//     document.getElementById('btn9').style.color = 'lime';
-// }
-
-// // onchange event
-// function changeInput(){
-//     document.getElementById('btn10').innerHTML = 'Input value changed!';
-//     document.getElementById('btn10').style.color = 'teal';
-// }
-
-// // onsubmit event
-// function submitForm(){
-//     document.getElementById('btn11').innerHTML = 'Form submitted!';
-//     document.getElementById('btn11').style.color = 'navy';
-// }
-
-// // onreset event
-// function resetForm(){
-//     document.getElementById('btn12').innerHTML = 'Form reset!';
-//     document.getElementById('btn12').style.color = 'olive';
-// }
-
-// // onerror event
-// function handleError(){
-//     document.getElementById('text14').innerHTML = 'An error occurred!';
-//     document.getElementById('text14').style.color = 'red';
-// }   
-
-// // oncontextmenu event
-// function contextMenu(){
-//     document.getElementById('btn13').innerHTML = 'Context menu opened!';
-//     document.getElementById('btn13').style.color = 'gray';
-// }
-
-// // ondrag event
-// function dragElement(){
-//     document.getElementById('btn14').innerHTML = 'Element is being dragged!';
-//     document.getElementById('btn14').style.color = 'brown';
-// }
-
-// // ondragstart event
-// function dragStart(){
-//     document.getElementById('btn15').innerHTML = 'Drag started!';
-//     document.getElementById('btn15').style.color = 'purple';
-// }
-
-// // ondragend event
-// function dragEnd(){
-//     document.getElementById('btn16').innerHTML = 'Drag ended!';
-//     document.getElementById('btn16').style.color = 'orange';
-// }
-
